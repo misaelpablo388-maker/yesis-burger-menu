@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #f1f1f1;
+  min-height: 100vh;
+  background: #0a0a0a;
+}
+
+.background {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle at 30% 20%, rgba(245, 158, 11, 0.06) 0%, transparent 60%);
+  z-index: -1;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+
+/* ==================== HEADER PROFESIONAL ==================== */
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.header-glass {
+  background: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(251, 191, 36, 0.2);
+  border-radius: 28px;
+  padding: 50px 60px 40px;
+  display: inline-block;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.menu-label {
+  font-size: 0.95rem;
+  letter-spacing: 4px;
+  font-weight: 700;
+  color: #fbbf24;
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.8rem;
+  font-weight: 700;
+  letter-spacing: -3px;
+  background: linear-gradient(90deg, #ffffff, #fcd34d, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 1.35rem;
+  color: #d1d5db;
+  font-weight: 500;
+}
+
+/* ==================== RESTO DEL ESTILO (sin cambios) ==================== */
+.menu-section {
+  background: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  padding: 40px 35px;
+  margin-bottom: 40px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.emoji { font-size: 2.4rem; }
+
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #fbbf24;
+  letter-spacing: -1px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: rgba(30, 30, 30, 0.9);
+  border: 1px solid rgba(251, 191, 36, 0.15);
+  border-radius: 18px;
+  padding: 22px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #fbbf24;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.item-name { font-size: 1.35rem; font-weight: 600; }
+
+.badge-mas-vendida {
+  background: #ef4444;
+  color: white;
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+.description {
+  color: #9ca3af;
+  line-height: 1.45;
+  margin-bottom: 16px;
+}
+
+.price {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #fbbf24;
+}
+
+/* Tortas y demás secciones */
+.tortas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.torta-item {
+  background: rgba(40,40,40,0.8);
+  padding: 14px 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.torta-price-center {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #fbbf24;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #25D366;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+  text-decoration: none;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.08);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .title { font-size: 3.4rem; }
+  .header-glass { padding: 40px 20px 30px; }
+  .cards-grid { grid-template-columns: 1fr; }
+}
+
+/* ====================== INFORMACIÓN ====================== */
+.info-section {
+  margin-top: 20px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  margin-top: 20px;
+}
+
+.info-item {
+  display: flex;
+  gap: 16px;
+  background: rgba(30, 30, 30, 0.7);
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(251, 191, 36, 0.1);
+}
+
+.info-icon {
+  font-size: 2rem;
+  width: 50px;
+  flex-shrink: 0;
+}
+
+.info-item h4 {
+  color: #fbbf24;
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+}
+
+.info-item p {
+  color: #d1d5db;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* IMÁGENES CUADRADAS NORMALES */
+.card-image,
+.combo-image {
+  width: 100%;
+  height: 180px;           /* Ajusta este número si quieres más pequeñas */
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+/* Hover opcional */
+.card:hover .card-image,
+.combo:hover .combo-image {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Contenedor cuadrado más pequeño */
+.image-container {
+  width: 100%;
+  max-width: 220px;           /* ← Esto controla el tamaño */
+  aspect-ratio: 1 / 1;
+  background: #1a1a1a;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-container:hover img {
+  transform: scale(1.06);
+  transition: transform 0.4s ease;
+}
